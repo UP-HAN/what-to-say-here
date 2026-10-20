@@ -1,0 +1,388 @@
+{
+  "types": {
+    "bar": {
+      "label": "바·펍",
+      "keywords": ["펍", "루프탑바", "재즈바", "스포츠바", "술집", "호프", "맥주", "생맥주", "칵테일", "와인", "안주", "한잔", "bar", "pub", "beer", "draft", "cocktail", "wine", "brewery"],
+      "situations": [
+        {
+          "emoji": "🚪",
+          "label": "들어가기",
+          "keywords": ["입장", "자리", "빈자리", "앉기", "신분증", "여권", "아이디", "몇명", "seat", "table", "id"],
+          "cards": [
+            {
+              "intent": "자리 있어요?",
+              "say": { "en": { "t": "Do you have a table?", "s": "두유 해버 테이블?" } },
+              "reply": {
+                "en": [
+                  { "t": "Bar or table?", "s": "바 오어 테이블?", "ko": "바 자리요, 테이블이요?" },
+                  { "t": "How many?", "s": "하우 메니?", "ko": "몇 분이세요?" }
+                ]
+              }
+            },
+            {
+              "intent": "두 명이요.",
+              "say": { "en": { "t": "Two, please.", "s": "투, 플리즈" } },
+              "reply": {
+                "en": [
+                  { "t": "This way, please.", "s": "디스 웨이, 플리즈", "ko": "이쪽으로 오세요." }
+                ]
+              }
+            },
+            {
+              "intent": "여권 보여드릴까요?",
+              "say": { "en": { "t": "Do you need my passport?", "s": "두유 니드 마이 패스포트?" } },
+              "reply": {
+                "en": [
+                  { "t": "ID, please.", "s": "아이디, 플리즈", "ko": "신분증 주세요." },
+                  { "t": "No, you're fine.", "s": "노, 유어 파인", "ko": "아니요, 괜찮아요." }
+                ]
+              },
+              "note": "문 앞에서 나이를 확인하려고 신분증을 보자고 할 때가 있어요. 여권을 가까운 주머니에 두세요.",
+              "volatile": true
+            },
+            {
+              "intent": "여기 앉아도 돼요?",
+              "say": { "en": { "t": "Is this open?", "s": "이즈 디스 오픈?" } },
+              "reply": {
+                "en": [
+                  { "t": "Go ahead.", "s": "고 어헤드", "ko": "그러세요." },
+                  { "t": "Sorry, it's taken.", "s": "쏘리, 잇츠 테이큰", "ko": "죄송해요, 자리 있어요." }
+                ]
+              },
+              "note": "빈 의자를 손으로 가리키면서 말하면 바로 통해요."
+            }
+          ]
+        },
+        {
+          "emoji": "🍺",
+          "label": "시키기",
+          "keywords": ["주문", "시키다", "맥주", "생맥주", "메뉴판", "콜라", "음료", "order", "beer", "menu", "draft"],
+          "cards": [
+            {
+              "intent": "맥주 하나요.",
+              "say": { "en": { "t": "A beer, please.", "s": "어 비어, 플리즈" } },
+              "reply": {
+                "en": [
+                  { "t": "Draft or bottle?", "s": "드래프트 오어 바를?", "ko": "생맥주요, 병맥주요?" }
+                ]
+              }
+            },
+            {
+              "intent": "생맥주로 주세요.",
+              "say": { "en": { "t": "A draft beer, please.", "s": "어 드래프트 비어, 플리즈" } },
+              "reply": {
+                "en": [
+                  { "t": "Coming right up.", "s": "커밍 라잇 업", "ko": "바로 드릴게요." }
+                ]
+              }
+            },
+            {
+              "intent": "메뉴판 주세요.",
+              "say": { "en": { "t": "Menu, please.", "s": "메뉴, 플리즈" } },
+              "reply": {
+                "en": [
+                  { "t": "Here you go.", "s": "히얼유 고", "ko": "여기 있습니다." }
+                ]
+              },
+              "note": "메뉴에 사진이 있으면 그걸 손가락으로 짚어도 통해요."
+            },
+            {
+              "intent": "저는 콜라 주세요.",
+              "say": { "en": { "t": "A Coke for me, please.", "s": "어 코크 포 미, 플리즈" } },
+              "reply": {
+                "en": [
+                  { "t": "Sure thing.", "s": "슈어 띵", "ko": "알겠습니다." }
+                ]
+              },
+              "note": "술을 안 마셔도 그냥 편하게 말하면 돼요."
+            }
+          ]
+        },
+        {
+          "emoji": "🍟",
+          "label": "안주 추가",
+          "keywords": ["안주", "추가", "하나더", "감자튀김", "물", "이거뭐예요", "food", "fries", "water", "more"],
+          "cards": [
+            {
+              "intent": "이거 하나 더 주세요.",
+              "say": { "en": { "t": "One more, please.", "s": "원 모어, 플리즈" } },
+              "reply": {
+                "en": [
+                  { "t": "Another one?", "s": "어나더 원?", "ko": "같은 걸로 하나 더요?" }
+                ]
+              }
+            },
+            {
+              "intent": "감자튀김 하나요.",
+              "say": { "en": { "t": "Fries, please.", "s": "프라이즈, 플리즈" } },
+              "reply": {
+                "en": [
+                  { "t": "Anything else?", "s": "애니띵 엘스?", "ko": "더 필요하세요?" }
+                ]
+              }
+            },
+            {
+              "intent": "이거 뭐예요?",
+              "say": { "en": { "t": "What's this?", "s": "와츠 디스?" } },
+              "reply": {
+                "en": [
+                  { "t": "It's chicken.", "s": "잇츠 치킨", "ko": "닭고기예요." },
+                  { "t": "It's a little spicy.", "s": "잇처 리를 스파이시", "ko": "조금 매워요." }
+                ]
+              }
+            },
+            {
+              "intent": "물 좀 주세요.",
+              "say": { "en": { "t": "Can I get tap water?", "s": "캔아이 겟 탭 워러?" } },
+              "reply": {
+                "en": [
+                  { "t": "Ice water?", "s": "아이스 워러?", "ko": "얼음물로 드릴까요?" }
+                ]
+              },
+              "note": "미국은 시키지 않으면 물을 안 주는 곳이 많아요. 돈을 받는지 아닌지는 가게마다 달라요.",
+              "volatile": true
+            }
+          ]
+        },
+        {
+          "emoji": "💳",
+          "label": "계산하기",
+          "keywords": ["계산", "결제", "카드", "현금", "팁", "따로내기", "check", "pay", "card", "tip"],
+          "cards": [
+            {
+              "intent": "계산할게요.",
+              "say": { "en": { "t": "Check, please.", "s": "첵, 플리즈" } },
+              "reply": {
+                "en": [
+                  { "t": "Sure, one second.", "s": "슈어, 원 세컨드", "ko": "네, 잠시만요." }
+                ]
+              }
+            },
+            {
+              "intent": "따로 계산해 주세요.",
+              "say": { "en": { "t": "Separate checks, please.", "s": "세퍼릿 첵스, 플리즈" } },
+              "reply": {
+                "en": [
+                  { "t": "No problem.", "s": "노 프라블럼", "ko": "그럼요." }
+                ]
+              },
+              "note": "따로 낼 거면 시킬 때 미리 말해두면 편해요."
+            },
+            {
+              "intent": "카드로 할게요.",
+              "say": { "en": { "t": "Card, please.", "s": "카드, 플리즈" } },
+              "reply": {
+                "en": [
+                  { "t": "Tap or insert?", "s": "탭 오어 인썰트?", "ko": "찍을까요, 꽂을까요?" }
+                ]
+              }
+            },
+            {
+              "intent": "팁은 어떻게 드려요?",
+              "say": { "en": { "t": "How do I leave a tip?", "s": "하우두아이 리버 팁?" } },
+              "reply": {
+                "en": [
+                  { "t": "You can add it here.", "s": "유캔 애딧 히어", "ko": "여기에 적으시면 돼요." }
+                ]
+              },
+              "note": "가게마다 팁 내는 방법이 달라요. 그냥 물어보면 알려줘요.",
+              "volatile": true
+            }
+          ]
+        }
+      ]
+    },
+    "post": {
+      "label": "우체국",
+      "keywords": ["우체국", "우편", "택배", "소포", "우표", "엽서", "부치다", "post", "post office", "mail", "package", "stamp", "postcard"],
+      "situations": [
+        {
+          "emoji": "📦",
+          "label": "부치기",
+          "keywords": ["부치기", "보내기", "소포", "택배", "한국으로", "내용물", "send", "mail", "package"],
+          "cards": [
+            {
+              "intent": "이거 부치려고요.",
+              "say": { "en": { "t": "I want to send this.", "s": "아이 원투 센 디스" } },
+              "reply": {
+                "en": [
+                  { "t": "Where to?", "s": "웨어 투?", "ko": "어디로 보내세요?" }
+                ]
+              }
+            },
+            {
+              "intent": "한국으로요.",
+              "say": { "en": { "t": "To Korea, please.", "s": "투 코리아, 플리즈" } },
+              "reply": {
+                "en": [
+                  { "t": "Letter or package?", "s": "레러 오어 패키지?", "ko": "편지예요, 소포예요?" }
+                ]
+              },
+              "note": "받는 사람 주소를 종이에 적어 가면 훨씬 빨리 끝나요."
+            },
+            {
+              "intent": "이거 보내도 돼요?",
+              "say": { "en": { "t": "Can I send this?", "s": "캔아이 센 디스?" } },
+              "reply": {
+                "en": [
+                  { "t": "Let me check.", "s": "렛미 첵", "ko": "확인해 볼게요." }
+                ]
+              },
+              "note": "약·술·담배·향수는 못 보내는 경우가 많아요. 창구에 올려놓기 전에 먼저 물어보세요.",
+              "volatile": true
+            },
+            {
+              "intent": "안에는 옷이에요.",
+              "say": { "en": { "t": "Just clothes.", "s": "저스트 클로우즈" } },
+              "reply": {
+                "en": [
+                  { "t": "Okay, fill this out.", "s": "오케이, 필 디스 아웃", "ko": "이 종이 좀 적어 주세요." }
+                ]
+              },
+              "note": "안에 뭐가 들었는지 적는 종이를 줘요. 물건 이름을 미리 적어 가면 편해요."
+            }
+          ]
+        },
+        {
+          "emoji": "💰",
+          "label": "얼마 며칠",
+          "keywords": ["얼마", "가격", "요금", "며칠", "기간", "빠른", "싼거", "how much", "days", "price"],
+          "cards": [
+            {
+              "intent": "얼마예요?",
+              "say": { "en": { "t": "How much is it?", "s": "하우 머치 이짓?" } },
+              "reply": {
+                "en": [
+                  { "t": "Let me weigh it.", "s": "렛미 웨이릿", "ko": "무게 좀 달아볼게요." }
+                ]
+              },
+              "note": "요금은 무게와 보내는 방법에 따라 달라져요. 창구에서 물어보세요.",
+              "volatile": true
+            },
+            {
+              "intent": "며칠 걸려요?",
+              "say": { "en": { "t": "How long does it take?", "s": "하우 롱 더짓 테익?" } },
+              "reply": {
+                "en": [
+                  { "t": "About ten days.", "s": "어바웃 텐 데이즈", "ko": "열흘쯤 걸려요." }
+                ]
+              },
+              "note": "걸리는 날짜는 그때그때 달라요. 창구에서 물어보세요.",
+              "volatile": true
+            },
+            {
+              "intent": "더 싼 거 있어요?",
+              "say": { "en": { "t": "Is there a cheaper way?", "s": "이즈 데어러 치퍼 웨이?" } },
+              "reply": {
+                "en": [
+                  { "t": "Yes, but slower.", "s": "예스, 벗 슬로워", "ko": "네, 대신 느려요." }
+                ]
+              }
+            },
+            {
+              "intent": "제일 빠른 걸로 해주세요.",
+              "say": { "en": { "t": "The fastest one, please.", "s": "더 패스티스트 원, 플리즈" } },
+              "reply": {
+                "en": [
+                  { "t": "It costs more.", "s": "잇 코스츠 모어", "ko": "그건 값이 더 나가요." }
+                ]
+              },
+              "note": "빠른 방법은 값이 많이 뛸 수 있어요. 얼마인지 먼저 물어보세요.",
+              "volatile": true
+            }
+          ]
+        },
+        {
+          "emoji": "🧰",
+          "label": "상자 테이프",
+          "keywords": ["상자", "박스", "테이프", "포장", "싸기", "봉투", "box", "tape", "pack", "envelope"],
+          "cards": [
+            {
+              "intent": "상자 파나요?",
+              "say": { "en": { "t": "Do you sell boxes?", "s": "두유 셀 박씨즈?" } },
+              "reply": {
+                "en": [
+                  { "t": "Right over there.", "s": "라잇 오버 데어", "ko": "바로 저쪽에 있어요." }
+                ]
+              }
+            },
+            {
+              "intent": "이 크기로 주세요.",
+              "say": { "en": { "t": "This size, please.", "s": "디스 사이즈, 플리즈" } },
+              "reply": {
+                "en": [
+                  { "t": "Is that big enough?", "s": "이즈 댓 빅 이너프?", "ko": "그거면 충분해요?" }
+                ]
+              }
+            },
+            {
+              "intent": "테이프 좀 써도 돼요?",
+              "say": { "en": { "t": "Can I use some tape?", "s": "캔아이 유즈 썸 테입?" } },
+              "reply": {
+                "en": [
+                  { "t": "Sure, over here.", "s": "슈어, 오버 히어", "ko": "네, 이쪽에 있어요." },
+                  { "t": "We sell it there.", "s": "위 셀 잇 데어", "ko": "저기서 팔아요." }
+                ]
+              }
+            },
+            {
+              "intent": "여기서 싸도 돼요?",
+              "say": { "en": { "t": "Can I pack it here?", "s": "캔아이 패킷 히어?" } },
+              "reply": {
+                "en": [
+                  { "t": "Sure, use that table.", "s": "슈어, 유즈 댓 테이블", "ko": "네, 저 탁자 쓰세요." }
+                ]
+              },
+              "note": "미국 우체국은 대신 싸주지 않아요. 상자와 테이프를 사서 직접 싸면 돼요."
+            }
+          ]
+        },
+        {
+          "emoji": "✉️",
+          "label": "우표 사기",
+          "keywords": ["우표", "엽서", "편지", "우체통", "몇장", "stamp", "postcard", "letter", "mailbox"],
+          "cards": [
+            {
+              "intent": "한국 보내는 우표요.",
+              "say": { "en": { "t": "Stamps for Korea, please.", "s": "스탬프스 포 코리아, 플리즈" } },
+              "reply": {
+                "en": [
+                  { "t": "How many do you need?", "s": "하우 메니 두유 니드?", "ko": "몇 장 필요하세요?" }
+                ]
+              },
+              "note": "한국까지 보내는 우표값은 자주 바뀌어요. 창구에서 물어보세요.",
+              "volatile": true
+            },
+            {
+              "intent": "다섯 장이요.",
+              "say": { "en": { "t": "Five, please.", "s": "파이브, 플리즈" } },
+              "reply": {
+                "en": [
+                  { "t": "Anything else today?", "s": "애니띵 엘스 투데이?", "ko": "더 필요한 건 없으세요?" }
+                ]
+              }
+            },
+            {
+              "intent": "엽서 보내려고요.",
+              "say": { "en": { "t": "This postcard to Korea.", "s": "디스 포스트카드 투 코리아" } },
+              "reply": {
+                "en": [
+                  { "t": "I can mail it here.", "s": "아이캔 메일릿 히어", "ko": "여기서 부쳐 드릴게요." }
+                ]
+              }
+            },
+            {
+              "intent": "우체통 어디예요?",
+              "say": { "en": { "t": "Where is the mailbox?", "s": "웨어리즈 더 메일박스?" } },
+              "reply": {
+                "en": [
+                  { "t": "Outside, by the door.", "s": "아웃사이드, 바이 더 도어", "ko": "밖에, 문 옆에 있어요." }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

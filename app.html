@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>여기서 뭐라고 해요?</title>
+<meta name="theme-color" content="#131A24">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Gothic+A1:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+  <header>
+    <div class="eyebrow"><i></i>PLACE → PHRASE</div>
+    <h1>여기서 뭐라고 해요?</h1>
+    <button id="countryBtn" class="ctybtn">나라 선택 ▾</button>
+  </header>
+
+  <div class="tabs">
+    <button class="tab" id="tabFind" aria-selected="true">찾기</button>
+    <button class="tab" id="tabSaved" aria-selected="false">내 카드<span class="badge" id="cnt">0</span></button>
+  </div>
+
+  <div id="findView">
+    <div class="searchbar">
+      <input id="q" placeholder="어디로 가세요?" autocomplete="off">
+      <button class="go" id="goBtn">찾기</button>
+    </div>
+    <p class="hint">Ex) "뉴욕 호텔", "LA 지하철", "나이아가라폭포"</p>
+    <div id="out"></div>
+  </div>
+
+  <div id="savedView" style="display:none"></div>
+</div>
+
+<div id="country" role="dialog" aria-modal="true" aria-label="어느 나라 가세요?">
+  <div class="cty-eyebrow">START</div>
+  <h2 class="cty-title">어느 나라<br>가세요?</h2>
+  <p class="cty-desc">고른 나라의 말로 문장을 보여드려요.<br>영어는 어느 나라에서든 볼 수 있어요.</p>
+  <div id="countryList" class="cty-list"></div>
+  <div id="countryNotice" class="cty-notice" role="status"></div>
+</div>
+
+<div id="show" role="dialog" aria-modal="true" aria-label="상대방에게 보여주는 화면">
+  <button id="closeShow" aria-label="닫기">✕</button>
+  <div class="pre">SORRY — MY ENGLISH IS NOT GOOD.<br>PLEASE READ THIS.</div>
+  <div class="pre-ko">(제 영어가 서툴러요. 이것 좀 읽어주세요 — 라고 적혀 있어요)</div>
+  <div class="big" id="showText"></div>
+  <button class="speak" id="showSpeak">🔊 소리로 들려주기</button>
+  <div class="foot">상대방에게 화면을 보여주세요<br>닫으려면 <b>오른쪽 위 ✕</b>를 누르세요</div>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>

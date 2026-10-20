@@ -1,0 +1,15 @@
+{
+  "name": "여기서 뭐라고 해요?",
+  "short_name": "여기뭐라고",
+  "description": "장소를 검색하면 그곳에서 쓸 영어 문장을 꺼내주는 앱",
+  "start_url": "./app.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#EFF1EC",
+  "theme_color": "#131A24",
+  "lang": "ko",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

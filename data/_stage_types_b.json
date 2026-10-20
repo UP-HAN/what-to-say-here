@@ -1,0 +1,304 @@
+{
+  "types": {
+    "clothing": {
+      "label": "옷가게",
+      "keywords": ["옷가게", "옷집", "옷", "옷사기", "의류", "매장", "clothing", "clothes", "shop", "store", "자라", "zara", "유니클로", "uniqlo", "h&m", "에이치앤엠", "갭", "gap", "아울렛", "outlet", "백화점", "티셔츠", "바지"],
+      "situations": [
+        {
+          "emoji": "👕",
+          "label": "이거 찾아요",
+          "keywords": ["찾기", "구경", "둘러보기", "이거있어요", "어디있어요", "세일", "할인", "바지"],
+          "cards": [
+            {
+              "intent": "그냥 좀 볼게요.",
+              "say": { "en": { "t": "Just looking, thanks.", "s": "저스 루킹, 땡스" } },
+              "reply": { "en": [{ "t": "Take your time.", "s": "테익 유어 타임", "ko": "천천히 보세요." }] },
+              "note": "직원이 먼저 말을 거는 곳이 많아요. 이 한마디면 편하게 둘러볼 수 있어요."
+            },
+            {
+              "intent": "바지 찾고 있어요.",
+              "say": { "en": { "t": "I'm looking for pants.", "s": "아임 루킹 포 팬츠" } },
+              "reply": { "en": [{ "t": "Right over here.", "s": "롸잇 오버 히어", "ko": "이쪽이에요." }] }
+            },
+            {
+              "intent": "이거 어디 있어요?",
+              "say": { "en": { "t": "Where can I find this?", "s": "웨어 캔아이 파인 디스?" } },
+              "reply": { "en": [{ "t": "Follow me.", "s": "팔로우 미", "ko": "따라오세요." }] },
+              "note": "폰에 저장해 둔 사진을 보여주면서 말하면 훨씬 빨라요."
+            },
+            {
+              "intent": "이거 세일해요?",
+              "say": { "en": { "t": "Is this on sale?", "s": "이즈 디스 온 세일?" } },
+              "reply": {
+                "en": [
+                  { "t": "Yes, it is.", "s": "예스, 이리즈", "ko": "네, 맞아요." },
+                  { "t": "No, full price.", "s": "노, 풀 프라이스", "ko": "아니요, 정가예요." }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "emoji": "📏",
+          "label": "사이즈 묻기",
+          "keywords": ["사이즈", "크기", "큰거", "작은거", "맞는거", "size", "치수"],
+          "cards": [
+            {
+              "intent": "더 큰 거 있어요?",
+              "say": { "en": { "t": "Do you have a bigger one?", "s": "두유 해버 비거 원?" } },
+              "reply": { "en": [{ "t": "Let me check.", "s": "레미 첵", "ko": "확인해 볼게요." }] },
+              "note": "사이즈 숫자가 한국과 달라서 헷갈려요. 내 숫자를 몰라도 '더 큰 거'로 물으면 그대로 통해요.",
+              "volatile": true
+            },
+            {
+              "intent": "더 작은 거 있어요?",
+              "say": { "en": { "t": "Do you have a smaller one?", "s": "두유 해버 스몰러 원?" } },
+              "reply": { "en": [{ "t": "This is the smallest.", "s": "디스 이즈 더 스몰리스트", "ko": "이게 제일 작은 거예요." }] }
+            },
+            {
+              "intent": "이거 무슨 사이즈예요?",
+              "say": { "en": { "t": "What size is this?", "s": "왓 사이지즈 디스?" } },
+              "reply": {
+                "en": [
+                  { "t": "It's a medium.", "s": "잇처 미디엄", "ko": "미디엄이에요." },
+                  { "t": "That's a large.", "s": "댓처 라지", "ko": "그건 라지예요." }
+                ]
+              }
+            },
+            {
+              "intent": "이거 미디엄 있어요?",
+              "say": { "en": { "t": "Do you have this in a medium?", "s": "두유 해브 디스 이너 미디엄?" } },
+              "reply": { "en": [{ "t": "I'll go look.", "s": "아일 고 룩", "ko": "가서 볼게요." }] }
+            }
+          ]
+        },
+        {
+          "emoji": "🪞",
+          "label": "입어보기",
+          "keywords": ["입어보기", "탈의실", "피팅룸", "거울", "색깔", "다른색", "커요", "작아요"],
+          "cards": [
+            {
+              "intent": "입어봐도 돼요?",
+              "say": { "en": { "t": "Can I try this on?", "s": "캔아이 트라이 디스 온?" } },
+              "reply": { "en": [{ "t": "Sure, over there.", "s": "슈어, 오버 데어", "ko": "네, 저쪽이에요." }] },
+              "note": "미국 옷가게에서 입어보는 건 자연스러운 일이에요."
+            },
+            {
+              "intent": "탈의실 어디예요?",
+              "say": { "en": { "t": "Where's the fitting room?", "s": "웨어즈 더 피팅 룸?" } },
+              "reply": { "en": [{ "t": "In the back.", "s": "인 더 백", "ko": "안쪽에 있어요." }] },
+              "note": "간판에 dressing room이라고 쓰여 있기도 해요. 같은 곳이에요."
+            },
+            {
+              "intent": "너무 커요.",
+              "say": { "en": { "t": "It's too big.", "s": "잇츠 투 빅" } },
+              "reply": { "en": [{ "t": "I'll get a smaller one.", "s": "아일 게러 스몰러 원", "ko": "더 작은 걸로 가져올게요." }] }
+            },
+            {
+              "intent": "다른 색 있어요?",
+              "say": { "en": { "t": "Any other colors?", "s": "애니 아더 컬러즈?" } },
+              "reply": { "en": [{ "t": "Black and white.", "s": "블랙 앤 화이트", "ko": "검정이랑 흰색 있어요." }] }
+            }
+          ]
+        },
+        {
+          "emoji": "🛍️",
+          "label": "사고 바꾸기",
+          "keywords": ["살게요", "봉투", "포장", "선물", "환불", "교환", "영수증", "물러주세요"],
+          "cards": [
+            {
+              "intent": "이거 살게요.",
+              "say": { "en": { "t": "I'll take this.", "s": "아일 테익 디스" } },
+              "reply": { "en": [{ "t": "Cash or card?", "s": "캐쉬 오어 카드?", "ko": "현금이요, 카드요?" }] }
+            },
+            {
+              "intent": "봉투 하나 주세요.",
+              "say": { "en": { "t": "A bag, please.", "s": "어 백, 플리즈" } },
+              "reply": {
+                "en": [
+                  { "t": "Sure.", "s": "슈어", "ko": "네." },
+                  { "t": "That'll be ten cents.", "s": "댈비 텐 센츠", "ko": "봉투값 10센트예요." }
+                ]
+              },
+              "note": "지역에 따라 봉투값을 몇 센트 따로 받기도 해요. 장바구니를 챙겨가면 마음이 편해요.",
+              "volatile": true
+            },
+            {
+              "intent": "선물 포장 돼요?",
+              "say": { "en": { "t": "Can you gift wrap it?", "s": "캔유 기프트 래핏?" } },
+              "reply": {
+                "en": [
+                  { "t": "Sure, no charge.", "s": "슈어, 노 차지", "ko": "네, 돈 안 받아요." },
+                  { "t": "There's a small fee.", "s": "데얼저 스몰 피", "ko": "돈이 조금 들어요." }
+                ]
+              },
+              "note": "포장해 주는 곳도, 안 해주는 곳도 있어요. 값을 받는 곳도 있으니 물어보세요.",
+              "volatile": true
+            },
+            {
+              "intent": "이거 환불돼요?",
+              "say": { "en": { "t": "Can I return this?", "s": "캔아이 리턴 디스?" } },
+              "reply": { "en": [{ "t": "Do you have the receipt?", "s": "두유 해브 더 리씨트?", "ko": "영수증 있으세요?" }] },
+              "note": "환불되는 기간은 가게마다 달라요. 살 때 미리 물어보고 영수증을 챙겨두세요.",
+              "volatile": true
+            }
+          ]
+        }
+      ]
+    },
+    "salon": {
+      "label": "미용실",
+      "keywords": ["미용실", "이발소", "미장원", "머리", "머리자르기", "머리깎기", "머리자르는곳", "이발", "커트", "컷", "헤어", "파마", "바버샵", "barber", "barbershop", "salon", "hair", "haircut", "hair salon"],
+      "situations": [
+        {
+          "emoji": "💈",
+          "label": "들어가기",
+          "keywords": ["들어가기", "예약", "기다리기", "대기", "자리", "이름적기", "왔어요"],
+          "cards": [
+            {
+              "intent": "예약 없이 돼요?",
+              "say": { "en": { "t": "Do you take walk-ins?", "s": "두유 테익 워킨즈?" } },
+              "reply": {
+                "en": [
+                  { "t": "Yes, come on in.", "s": "예스, 커머닌", "ko": "네, 들어오세요." },
+                  { "t": "Appointment only, sorry.", "s": "어포인먼트 온리, 쏘리", "ko": "예약만 받아요, 죄송해요." }
+                ]
+              },
+              "note": "예약 없이 그냥 가도 되는 곳이 있고 예약만 받는 곳도 있어요. 문 앞에서 이 한마디로 확인하세요.",
+              "volatile": true
+            },
+            {
+              "intent": "여기서 이름 적어요?",
+              "say": { "en": { "t": "Do I check in here?", "s": "두아이 첵킨 히어?" } },
+              "reply": {
+                "en": [
+                  { "t": "Yes, right here.", "s": "예스, 롸잇 히어", "ko": "네, 여기서요." },
+                  { "t": "No, just wait here.", "s": "노, 저스 웨잇 히어", "ko": "아니요, 여기서 기다리시면 돼요." }
+                ]
+              },
+              "note": "이름을 먼저 올려두고 순서를 기다리는 곳이 있어요. 들어가서 한번 물어보세요.",
+              "volatile": true
+            },
+            {
+              "intent": "얼마나 기다려요?",
+              "say": { "en": { "t": "How long is the wait?", "s": "하우 롱이즈 더 웨잇?" } },
+              "reply": { "en": [{ "t": "About thirty minutes.", "s": "어바웃 써리 미닛츠", "ko": "30분쯤요." }] }
+            },
+            {
+              "intent": "머리 자르러 왔어요.",
+              "say": { "en": { "t": "Just a haircut, please.", "s": "저스터 헤어컷, 플리즈" } },
+              "reply": { "en": [{ "t": "Right this way.", "s": "롸잇 디스 웨이", "ko": "이쪽으로 오세요." }] }
+            }
+          ]
+        },
+        {
+          "emoji": "✂️",
+          "label": "자르기 전",
+          "keywords": ["자르기", "커트", "짧게", "조금만", "사진", "스타일", "옆머리"],
+          "cards": [
+            {
+              "intent": "이 사진처럼 해주세요.",
+              "say": { "en": { "t": "Like this photo, please.", "s": "라익 디스 포토, 플리즈" } },
+              "reply": { "en": [{ "t": "Got it.", "s": "가릿", "ko": "알겠어요." }] },
+              "note": "말보다 사진이 백 배 확실해요. 가기 전에 원하는 머리 사진을 폰에 저장해 두세요."
+            },
+            {
+              "intent": "짧게 잘라주세요.",
+              "say": { "en": { "t": "Short, please.", "s": "숏, 플리즈" } },
+              "reply": { "en": [{ "t": "How short?", "s": "하우 숏?", "ko": "얼마나 짧게요?" }] },
+              "note": "'짧게'는 사람마다 기준이 달라요. 사진을 같이 보여주면 훨씬 안전해요."
+            },
+            {
+              "intent": "조금만 잘라주세요.",
+              "say": { "en": { "t": "Just a little, please.", "s": "저스터 리를, 플리즈" } },
+              "reply": { "en": [{ "t": "Like this much?", "s": "라익 디스 머치?", "ko": "이만큼요?" }] },
+              "note": "손가락으로 자를 길이를 벌려 보이면 서로 마음이 놓여요."
+            },
+            {
+              "intent": "여기만 짧게요.",
+              "say": { "en": { "t": "Short here, please.", "s": "숏 히어, 플리즈" } },
+              "reply": {
+                "en": [
+                  { "t": "How much do you want off?", "s": "하우 머치 두유 원 오프?", "ko": "얼마나 잘라 드릴까요?" },
+                  { "t": "What number?", "s": "왓 넘버?", "ko": "이발기 몇 번으로 할까요?" }
+                ]
+              },
+              "note": "옆머리든 뒷머리든 손으로 짚으면서 말하세요. 길이를 되물으면 손가락을 벌려 보여주거나 사진을 보여주는 게 제일 확실해요."
+            }
+          ]
+        },
+        {
+          "emoji": "💇",
+          "label": "자르는 중",
+          "keywords": ["자르는중", "더짧게", "더잘라", "그만", "샴푸", "머리감기", "다듬기"],
+          "cards": [
+            {
+              "intent": "조금 더 짧게요.",
+              "say": { "en": { "t": "A little shorter, please.", "s": "어 리를 쇼러, 플리즈" } },
+              "reply": { "en": [{ "t": "Like this?", "s": "라익 디스?", "ko": "이 정도요?" }] }
+            },
+            {
+              "intent": "이제 됐어요.",
+              "say": { "en": { "t": "That's good, thank you.", "s": "댓츠 굿, 땡큐" } },
+              "reply": { "en": [{ "t": "All done.", "s": "올 던", "ko": "다 됐어요." }] },
+              "note": "더 자르지 말라는 뜻으로도 통해요. 마음에 들면 바로 말해 주세요."
+            },
+            {
+              "intent": "여기 좀 더 다듬어주세요.",
+              "say": { "en": { "t": "A little more off here, please.", "s": "어 리를 모어 오프 히어, 플리즈" } },
+              "reply": { "en": [{ "t": "Right here?", "s": "롸잇 히어?", "ko": "여기요?" }] },
+              "note": "거울 속 내 머리를 손가락으로 짚으면서 말하면 그대로 통해요."
+            },
+            {
+              "intent": "머리도 감겨주세요.",
+              "say": { "en": { "t": "Can I get a shampoo too?", "s": "캔아이 게러 샴푸 투?" } },
+              "reply": {
+                "en": [
+                  { "t": "Follow me.", "s": "팔로우 미", "ko": "따라오세요." },
+                  { "t": "That's extra.", "s": "댓츠 엑스트라", "ko": "그건 값이 따로 붙어요." }
+                ]
+              },
+              "note": "머리 감기는 값이 따로 붙는 곳도 있어요. 먼저 물어보면 좋아요.",
+              "volatile": true
+            }
+          ]
+        },
+        {
+          "emoji": "🪞",
+          "label": "자르고 나서",
+          "keywords": ["다됐어요", "뒤쪽", "뒷머리", "거울", "마음에들어요", "팁", "또올게요"],
+          "cards": [
+            {
+              "intent": "뒤쪽 좀 보여주세요.",
+              "say": { "en": { "t": "Show me the back, please.", "s": "쇼우 미 더 백, 플리즈" } },
+              "reply": { "en": [{ "t": "Here you go.", "s": "히어 유 고", "ko": "여기요." }] },
+              "note": "거울을 뒤에 대고 뒷머리를 보여주는 곳이 많아요. 안 보여주면 이렇게 부탁하세요."
+            },
+            {
+              "intent": "마음에 들어요.",
+              "say": { "en": { "t": "It's great, thank you.", "s": "잇츠 그뤠잇, 땡큐" } },
+              "reply": { "en": [{ "t": "Glad you like it.", "s": "글래드 유 라이킷", "ko": "마음에 드신다니 다행이에요." }] }
+            },
+            {
+              "intent": "여기서 팁 누르는 거예요?",
+              "say": { "en": { "t": "Do I add the tip here?", "s": "두아이 애더 팁 히어?" } },
+              "reply": {
+                "en": [
+                  { "t": "Yes, tap a button.", "s": "예스, 탭 어 버튼", "ko": "네, 칸 하나 누르시면 돼요." },
+                  { "t": "You can press No Tip.", "s": "유 캔 프레스 노 팁", "ko": "'노 팁'을 누르셔도 돼요." }
+                ]
+              },
+              "note": "계산기 화면에 팁 고르는 칸이 뜨는 곳이 많아요. 20% 근처를 고르는 사람이 많지만 정해진 건 없어요. 안 하고 싶으면 'No Tip' 칸을 누르면 돼요.",
+              "volatile": true
+            },
+            {
+              "intent": "다음에 또 올게요.",
+              "say": { "en": { "t": "I'll come back.", "s": "아일 컴 백" } },
+              "reply": { "en": [{ "t": "Have a good one.", "s": "해버 굿 원", "ko": "좋은 하루 보내세요." }] }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

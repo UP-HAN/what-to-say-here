@@ -1,0 +1,207 @@
+{
+  "common_situations": [
+    {
+      "key": "restroom",
+      "label": "화장실",
+      "emoji": "🚻",
+      "keywords": ["화장실", "화장실가고싶어요", "화장실영어", "변소", "볼일", "restroom", "toilet", "wc", "bathroom", "washroom", "레스트룸", "바스룸"],
+      "cards": [
+        {
+          "intent": "화장실이 어디예요?",
+          "say": { "en": { "t": "Where's the restroom?", "s": "웨어즈 더 레스트룸?" } },
+          "reply": {
+            "en": [
+              { "t": "In the back, on the left.", "s": "인 더 백, 온 더 레픗", "ko": "안쪽 왼편이요." },
+              { "t": "Down the hall.", "s": "다운 더 홀", "ko": "복도 따라 가시면 돼요." }
+            ]
+          }
+        },
+        {
+          "intent": "화장실 좀 써도 돼요?",
+          "say": { "en": { "t": "Can I use the restroom?", "s": "캔아이 유즈 더 레스트룸?" } },
+          "reply": {
+            "en": [
+              { "t": "Sure, go ahead.", "s": "슈어, 고 어헤드", "ko": "네, 쓰세요." },
+              { "t": "Customers only, sorry.", "s": "커스터머즈 온리, 쏘리", "ko": "손님만 쓸 수 있어요." }
+            ]
+          },
+          "note": "카페나 식당에서는 음료 하나 시키고 쓰는 게 자연스러워요."
+        },
+        {
+          "intent": "열쇠나 번호 필요해요?",
+          "say": { "en": { "t": "Is there a key or code?", "s": "이즈 데어러 키 오어 코드?" } },
+          "reply": {
+            "en": [
+              { "t": "Here's the key.", "s": "히어즈 더 키", "ko": "여기 열쇠요." },
+              { "t": "The code is 1234.", "s": "더 코디즈 원 투 쓰리 포", "ko": "번호는 1234예요." }
+            ]
+          },
+          "note": "가게 화장실은 열쇠나 문 비밀번호가 필요한 곳도 있어요. 한번 물어보면 편해요.",
+          "volatile": true
+        },
+        {
+          "intent": "문이 잠겼어요.",
+          "say": { "en": { "t": "The door is locked.", "s": "더 도어리즈 락트" } },
+          "reply": {
+            "en": [
+              { "t": "Someone's in there.", "s": "썸원즈 인 데어", "ko": "안에 사람 있어요." },
+              { "t": "Ask at the counter.", "s": "애스캣 더 카운터", "ko": "카운터에 물어보세요." }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "key": "wifi",
+      "label": "와이파이",
+      "emoji": "📶",
+      "keywords": ["와이파이", "와이파이비번", "와이파이비밀번호", "인터넷", "무선인터넷", "무료와이파이", "wifi", "wi-fi", "wifi password", "password", "internet", "free wifi", "패스워드", "비번", "와파"],
+      "cards": [
+        {
+          "intent": "와이파이 있어요?",
+          "say": { "en": { "t": "Is there wifi?", "s": "이즈 데어 와이파이?" } },
+          "reply": {
+            "en": [
+              { "t": "Yes, it's free.", "s": "예스, 이츠 프리", "ko": "네, 무료예요." },
+              { "t": "Sorry, no wifi.", "s": "쏘리, 노 와이파이", "ko": "죄송해요, 와이파이가 없어요." }
+            ]
+          }
+        },
+        {
+          "intent": "비밀번호가 뭐예요?",
+          "say": { "en": { "t": "What's the password?", "s": "왓츠 더 패스워드?" } },
+          "reply": {
+            "en": [
+              { "t": "It's on your receipt.", "s": "이츠 온 유어 리시트", "ko": "영수증에 있어요." },
+              { "t": "It's on the wall.", "s": "이츠 온 더 월", "ko": "벽에 붙어 있어요." }
+            ]
+          },
+          "note": "영수증이나 벽에 적어둔 가게가 많아요. 묻기 전에 한번 둘러보세요."
+        },
+        {
+          "intent": "어느 게 여기 와이파이예요?",
+          "say": { "en": { "t": "Which network is yours?", "s": "위치 네트워키즈 유어즈?" } },
+          "reply": {
+            "en": [
+              { "t": "It's called Guest.", "s": "이츠 콜드 게스트", "ko": "'Guest'라고 뜨는 거요." },
+              { "t": "The top one.", "s": "더 탑 원", "ko": "맨 위에 있는 거요." }
+            ]
+          },
+          "note": "가게 이름이 그대로 와이파이 이름인 곳이 많아요. 비슷한 이름이 여러 개 뜨면 물어보세요."
+        },
+        {
+          "intent": "여기에 좀 적어주세요.",
+          "say": { "en": { "t": "Can you write it here?", "s": "캔유 롸이릿 히어?" } },
+          "reply": {
+            "en": [
+              { "t": "Okay, one second.", "s": "오케이, 원 세컨드", "ko": "네, 잠시만요." }
+            ]
+          },
+          "note": "종이나 영수증을 함께 내밀면 훨씬 빨라요."
+        }
+      ]
+    },
+    {
+      "key": "photo",
+      "label": "사진 찍기",
+      "emoji": "📷",
+      "keywords": ["사진", "사진찍기", "사진찍어주세요", "사진좀", "찍어주세요", "사진되나요", "photo", "picture", "take a photo", "camera", "포토", "픽쳐"],
+      "cards": [
+        {
+          "intent": "우리 사진 좀 찍어주세요.",
+          "say": { "en": { "t": "Can you take our picture?", "s": "캔유 테이카워 픽쳐?" } },
+          "reply": {
+            "en": [
+              { "t": "No problem.", "s": "노 프라블럼", "ko": "네, 그럼요." },
+              { "t": "This button?", "s": "디스 버튼?", "ko": "이 버튼이요?" }
+            ]
+          },
+          "note": "길에서 부탁할 때는 가족끼리 다니는 사람이나 카메라를 든 사람이 잘 찍어줘요."
+        },
+        {
+          "intent": "여기 누르시면 돼요.",
+          "say": { "en": { "t": "Tap here, please.", "s": "탭 히어, 플리즈" } },
+          "reply": {
+            "en": [
+              { "t": "Okay, got it.", "s": "오케이, 가릿", "ko": "네, 알겠어요." }
+            ]
+          },
+          "note": "폰을 건넨 뒤 화면을 손가락으로 짚어주면 거의 다 통해요."
+        },
+        {
+          "intent": "한 장만 더 부탁해요.",
+          "say": { "en": { "t": "One more, please.", "s": "원 모어, 플리즈" } },
+          "reply": {
+            "en": [
+              { "t": "Okay, smile!", "s": "오케이, 스마일!", "ko": "네, 웃으세요!" }
+            ]
+          }
+        },
+        {
+          "intent": "여기서 사진 찍어도 돼요?",
+          "say": { "en": { "t": "Can I take photos here?", "s": "캔아이 테익 포토즈 히어?" } },
+          "reply": {
+            "en": [
+              { "t": "Yes, but no flash.", "s": "예스, 벗 노 플래쉬", "ko": "네, 플래시는 안 돼요." },
+              { "t": "Sorry, no photos.", "s": "쏘리, 노 포토즈", "ko": "죄송해요, 사진은 안 됩니다." }
+            ]
+          },
+          "note": "박물관이나 공연장은 곳마다 달라요. 찍기 전에 한번 물어보면 마음이 편해요.",
+          "volatile": true
+        }
+      ]
+    },
+    {
+      "key": "lost",
+      "label": "잃어버렸어요",
+      "emoji": "🆘",
+      "keywords": ["잃어버렸어요", "잃어버림", "분실", "분실물", "가방", "지갑", "여권", "찾아주세요", "lost", "lost and found", "missing", "wallet", "passport", "로스트"],
+      "cards": [
+        {
+          "intent": "가방을 잃어버렸어요.",
+          "say": { "en": { "t": "I lost my bag.", "s": "아이 로슷 마이 백" } },
+          "reply": {
+            "en": [
+              { "t": "What does it look like?", "s": "왓 더짓 룩 라익?", "ko": "어떻게 생긴 거예요?" },
+              { "t": "Let me check.", "s": "렛미 첵", "ko": "확인해볼게요." }
+            ]
+          }
+        },
+        {
+          "intent": "지갑을 잃어버렸어요.",
+          "say": { "en": { "t": "I lost my wallet.", "s": "아이 로슷 마이 월릿" } },
+          "reply": {
+            "en": [
+              { "t": "Let me ask my manager.", "s": "렛미 애스크 마이 매니저", "ko": "매니저한테 물어볼게요." },
+              { "t": "I haven't seen it.", "s": "아이 해븐 시닛", "ko": "못 봤어요." }
+            ]
+          },
+          "note": "카드부터 정지시키는 게 급해요. 카드사 번호를 폰에 적어두면 마음이 놓여요."
+        },
+        {
+          "intent": "분실물 찾는 곳이 어디예요?",
+          "say": { "en": { "t": "Where's the lost and found?", "s": "웨어즈 더 로스탠 파운드?" } },
+          "reply": {
+            "en": [
+              { "t": "By the main gate.", "s": "바이 더 메인 게잇", "ko": "정문 옆에 있어요." },
+              { "t": "It's at customer service.", "s": "이츠 앳 커스터머 서비스", "ko": "고객센터에 있어요." }
+            ]
+          },
+          "note": "미국에서는 큰 건물이나 공원에 잃어버린 물건을 모아두는 곳을 따로 두기도 해요."
+        },
+        {
+          "intent": "여권을 잃어버렸어요.",
+          "say": { "en": { "t": "I lost my passport.", "s": "아이 로슷 마이 패스포트" } },
+          "reply": {
+            "en": [
+              { "t": "Call your embassy.", "s": "콜 유어 엠버시", "ko": "대사관에 전화하세요." },
+              { "t": "File a police report first.", "s": "파일러 폴리스 리폿 퍼스트", "ko": "먼저 경찰에 신고부터 하세요." }
+            ]
+          },
+          "note": "미국에서는 대사관보다 가까운 총영사관이 맡는 경우가 많아요. 영사안전콜센터 +82-2-3210-0404는 24시간 열려 있어요.",
+          "volatile": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,407 @@
+{
+  "types": {
+    "hospital": {
+      "label": "병원",
+      "keywords": ["병원", "의원", "응급실", "클리닉", "hospital", "clinic", "emergency", "er", "urgent care", "아파요", "다쳤어요", "진료", "의사", "doctor", "구급차", "119"],
+      "situations": [
+        {
+          "emoji": "🚨",
+          "label": "급할 때",
+          "keywords": ["급해요", "응급", "도와주세요", "구급차", "쓰러졌어요", "emergency", "help", "ambulance"],
+          "cards": [
+            {
+              "intent": "좀 도와주세요.",
+              "say": { "en": { "t": "I need help, please.", "s": "아이 니드 헬프, 플리즈" } },
+              "reply": {
+                "en": [
+                  { "t": "What happened?", "s": "왓 해픈드?", "ko": "무슨 일이세요?" },
+                  { "t": "Sit down here.", "s": "씨다운 히어", "ko": "여기 앉으세요." }
+                ]
+              }
+            },
+            {
+              "intent": "응급실이 어디예요?",
+              "say": { "en": { "t": "Where is the emergency room?", "s": "웨어리즈 디 이머전시 룸?" } },
+              "reply": {
+                "en": [
+                  { "t": "Down the hall, on the left.", "s": "다운 더 홀, 온 더 레프트", "ko": "복도 따라가서 왼쪽이요." }
+                ]
+              },
+              "note": "간판에 ER 또는 Emergency라고 크게 적혀 있어요. 감기·배탈처럼 급하지 않은 경우엔 응급실 말고 urgent care(어전트 케어)라는 곳으로 가기도 해요.",
+              "volatile": true
+            },
+            {
+              "intent": "의사 선생님 좀 불러주세요.",
+              "say": { "en": { "t": "Can you call a doctor?", "s": "캔유 콜러 닥터?" } },
+              "reply": {
+                "en": [
+                  { "t": "I'll get one now.", "s": "아일 겟 원 나우", "ko": "지금 부를게요." },
+                  { "t": "Follow me, please.", "s": "팔로우 미, 플리즈", "ko": "이쪽으로 오세요." }
+                ]
+              },
+              "note": "지금 당장 급할 때, 눈앞에 보이는 아무 직원한테나 보여주면 되는 문장이에요."
+            },
+            {
+              "intent": "구급차 좀 불러주세요.",
+              "say": { "en": { "t": "Please call an ambulance.", "s": "플리즈 콜런 앰뷸런스" } },
+              "reply": {
+                "en": [
+                  { "t": "Okay, stay right here.", "s": "오케이, 스테이 라잇 히어", "ko": "네, 여기 계세요." }
+                ]
+              },
+              "note": "미국에서는 급할 때 911로 전화해요. 말이 막히면 옆 사람에게 이 화면을 보여주고 전화를 부탁하세요."
+            }
+          ]
+        },
+        {
+          "emoji": "📋",
+          "label": "접수하기",
+          "keywords": ["접수", "등록", "기다리기", "대기", "여권", "check in", "reception", "front desk"],
+          "cards": [
+            {
+              "intent": "진료 좀 받고 싶어요.",
+              "say": { "en": { "t": "I need to see a doctor.", "s": "아이 니투 씨어 닥터" } },
+              "reply": {
+                "en": [
+                  { "t": "Do you have insurance?", "s": "두유 해브 인슈어런스?", "ko": "보험 있으세요?" },
+                  { "t": "Your passport, please.", "s": "유어 패스포트, 플리즈", "ko": "여권 주세요." }
+                ]
+              },
+              "note": "창구에 앉아 있는 사람에게 하는 말이에요. 이 화면을 보여주면 대개 서류부터 내줍니다."
+            },
+            {
+              "intent": "여권 여기 있어요.",
+              "say": { "en": { "t": "Here's my passport.", "s": "히어즈 마이 패스포트" } },
+              "reply": {
+                "en": [
+                  { "t": "Fill this out, please.", "s": "필 디스아웃, 플리즈", "ko": "이거 작성해 주세요." }
+                ]
+              },
+              "note": "여행자 보험 서류가 있으면 여권이랑 같이 꺼내두면 빨라요."
+            },
+            {
+              "intent": "얼마나 기다려요?",
+              "say": { "en": { "t": "How long is the wait?", "s": "하우 롱 이즈 더 웨잇?" } },
+              "reply": {
+                "en": [
+                  { "t": "About an hour.", "s": "어바우런 아워", "ko": "한 시간쯤이요." }
+                ]
+              }
+            },
+            {
+              "intent": "한국말 하는 분 있어요?",
+              "say": { "en": { "t": "Does anyone speak Korean?", "s": "더즈 애니원 스픽 코리언?" } },
+              "reply": {
+                "en": [
+                  { "t": "Let me check.", "s": "렛미 첵", "ko": "알아볼게요." }
+                ]
+              },
+              "note": "없다고 해도 괜찮아요. 이 카드 화면을 그냥 보여주는 게 더 빠를 때가 많아요."
+            }
+          ]
+        },
+        {
+          "emoji": "🤒",
+          "label": "어디 아파요",
+          "keywords": ["아파요", "열", "감기", "배탈", "다쳤어요", "증상", "약", "hurt", "pain", "fever", "sick"],
+          "cards": [
+            {
+              "intent": "여기가 아파요.",
+              "say": { "en": { "t": "It hurts here.", "s": "잇 헐츠 히어" } },
+              "reply": {
+                "en": [
+                  { "t": "How bad is it?", "s": "하우 배드 이짓?", "ko": "많이 아프세요?" }
+                ]
+              },
+              "note": "손으로 짚으면서 말하면 제일 정확해요. 영어보다 손가락이 낫습니다."
+            },
+            {
+              "intent": "열이 나요.",
+              "say": { "en": { "t": "I have a fever.", "s": "아이 해버 피버" } },
+              "reply": {
+                "en": [
+                  { "t": "Let me check your temperature.", "s": "렛미 체큐어 템퍼러처", "ko": "체온 좀 잴게요." }
+                ]
+              }
+            },
+            {
+              "intent": "어제부터 아팠어요.",
+              "say": { "en": { "t": "It started yesterday.", "s": "잇 스타리드 예스터데이" } },
+              "reply": {
+                "en": [
+                  { "t": "Did you take anything?", "s": "디쥬 테익 애니띵?", "ko": "약 드신 거 있어요?" }
+                ]
+              },
+              "note": "폰에서 달력을 열어 아프기 시작한 날을 짚어주면 훨씬 빨리 통해요."
+            },
+            {
+              "intent": "이 약 먹어도 돼요?",
+              "say": { "en": { "t": "Can I take this medicine?", "s": "캔아이 테익 디스 메디슨?" } },
+              "reply": {
+                "en": [
+                  { "t": "Let me look at it first.", "s": "렛미 루커릿 퍼스트", "ko": "그 약 먼저 좀 볼게요." }
+                ]
+              },
+              "note": "평소 먹는 약이 있으면 통째로 들고 가서 보여주세요. 이름을 말하는 것보다 훨씬 확실해요.",
+              "volatile": true
+            }
+          ]
+        },
+        {
+          "emoji": "💵",
+          "label": "돈·보험",
+          "keywords": ["돈", "병원비", "보험", "카드", "영수증", "청구서", "계산", "insurance", "pay", "bill", "receipt"],
+          "cards": [
+            {
+              "intent": "얼마 나와요?",
+              "say": { "en": { "t": "How much is it?", "s": "하우 머치 이짓?" } },
+              "reply": {
+                "en": [
+                  { "t": "It depends on your insurance.", "s": "잇 디펜존 유어 인슈어런스", "ko": "보험에 따라 달라요." },
+                  { "t": "You pay up front today.", "s": "유 페이 업프런트 투데이", "ko": "오늘 미리 내셔야 해요." }
+                ]
+              },
+              "note": "가는 곳마다 달라요. 동네 병원이나 urgent care는 접수할 때 먼저 내라는 곳이 많고, 응급실은 나중에 청구서가 오기도 해요. 접수할 때 '지금 내나요, 나중에 내나요'까지 같이 물어보세요.",
+              "volatile": true
+            },
+            {
+              "intent": "카드로 내도 돼요?",
+              "say": { "en": { "t": "Can I pay by card?", "s": "캔아이 페이 바이 카드?" } },
+              "reply": {
+                "en": [
+                  { "t": "Yes, insert it here.", "s": "예스, 인서릿 히어", "ko": "네, 여기 꽂으세요." },
+                  { "t": "We need a deposit first.", "s": "위 니더 디파짓 퍼스트", "ko": "먼저 예치금을 내셔야 해요." }
+                ]
+              },
+              "note": "먼저 예치금을 받아두는 곳도 있어요. 진료가 끝나고 남은 돈을 돌려받는지 그 자리에서 물어보세요.",
+              "volatile": true
+            },
+            {
+              "intent": "보험금 받을 서류 좀 보내주세요.",
+              "say": { "en": { "t": "Can you email me an itemized bill?", "s": "캔유 이메일 미 언 아이터마이즈드 빌?" } },
+              "reply": {
+                "en": [
+                  { "t": "Billing will send it to you.", "s": "빌링 윌 센딧 투유", "ko": "청구 부서에서 보내드릴 거예요." },
+                  { "t": "Sure, what's your email?", "s": "슈어, 왓츠 유어 이메일?", "ko": "네, 이메일 주소가 어떻게 되세요?" }
+                ]
+              },
+              "note": "한국에 돌아와 보험금 받을 때 필요한 서류예요. 그 자리에서 안 나오는 경우가 많으니 이메일 주소를 적어주고 오세요. 금액이 크면 영문 진단서도 필요할 수 있어요.",
+              "volatile": true
+            },
+            {
+              "intent": "영수증 주세요.",
+              "say": { "en": { "t": "Receipt, please.", "s": "리씨트, 플리즈" } },
+              "reply": {
+                "en": [
+                  { "t": "Here you go.", "s": "히어 유 고", "ko": "여기 있습니다." }
+                ]
+              },
+              "note": "받은 서류는 그 자리에서 사진으로도 한 장 찍어두면 잃어버릴 걱정이 없어요."
+            }
+          ]
+        }
+      ]
+    },
+    "bank": {
+      "label": "은행",
+      "keywords": ["은행", "환전", "환전소", "돈 바꾸기", "달러", "현금", "인출", "atm", "현금인출기", "bank", "exchange", "money exchange", "currency", "체이스", "chase", "citi"],
+      "situations": [
+        {
+          "emoji": "💱",
+          "label": "돈 바꾸기",
+          "keywords": ["환전", "돈 바꾸기", "달러", "환율", "수수료", "exchange", "rate", "fee"],
+          "cards": [
+            {
+              "intent": "여기서 돈 바꿀 수 있어요?",
+              "say": { "en": { "t": "Can I exchange money here?", "s": "캔아이 익스체인지 머니 히어?" } },
+              "reply": {
+                "en": [
+                  { "t": "Yes, how much?", "s": "예스, 하우 머치?", "ko": "네, 얼마나요?" },
+                  { "t": "Passport, please.", "s": "패스포트, 플리즈", "ko": "여권 주세요." }
+                ]
+              },
+              "note": "환전할 때 여권을 달라고 하는 곳이 많아요. 손에 들고 가면 편해요."
+            },
+            {
+              "intent": "원화를 달러로요.",
+              "say": { "en": { "t": "Korean won to dollars.", "s": "코리언 원 투 달러즈" } },
+              "reply": {
+                "en": [
+                  { "t": "We don't take Korean won.", "s": "위 돈 테익 코리언 원", "ko": "원화는 안 받아요." },
+                  { "t": "Okay, one moment.", "s": "오케이, 원 모먼트", "ko": "네, 잠시만요." }
+                ]
+              },
+              "note": "미국 은행 지점에서는 원화를 아예 안 받아주는 곳이 많아요. 공항 환전 카운터는 바로 되는 대신 환율이 가장 나쁜 편이니, 급한 만큼만 바꾸세요. 은행에 갈 거면 가기 전에 전화로 되는지 물어보세요.",
+              "volatile": true
+            },
+            {
+              "intent": "오늘 환율이 얼마예요?",
+              "say": { "en": { "t": "What's the rate today?", "s": "왓츠 더 레잇 투데이?" } },
+              "reply": {
+                "en": [
+                  { "t": "It's on the screen.", "s": "잇츠 온 더 스크린", "ko": "화면에 나와 있어요." }
+                ]
+              },
+              "volatile": true
+            },
+            {
+              "intent": "수수료 있어요?",
+              "say": { "en": { "t": "Is there a fee?", "s": "이즈 데어러 피?" } },
+              "reply": {
+                "en": [
+                  { "t": "No fee.", "s": "노 피", "ko": "수수료 없어요." },
+                  { "t": "Yes, there's a fee.", "s": "예스, 데어즈 어 피", "ko": "네, 있어요." }
+                ]
+              },
+              "note": "수수료가 없다고 해도 환율을 낮게 쳐서 이미 값을 받는 곳이 더 흔해요. 그러니 수수료만 묻지 말고 '내가 받는 돈이 얼마인지'를 종이에 적어 달라고 하는 게 제일 확실해요.",
+              "volatile": true
+            }
+          ]
+        },
+        {
+          "emoji": "🏧",
+          "label": "현금 뽑기",
+          "keywords": ["현금", "인출", "atm", "기계", "카드", "출금", "cash", "withdraw"],
+          "cards": [
+            {
+              "intent": "현금인출기 어디 있어요?",
+              "say": { "en": { "t": "Where is the ATM?", "s": "웨어리즈 디 에이티엠?" } },
+              "reply": {
+                "en": [
+                  { "t": "Right over there.", "s": "라잇 오버 데어", "ko": "바로 저기요." }
+                ]
+              },
+              "note": "편의점이나 마트 안에도 많지만, 은행 건물에 붙어 있는 기계가 보통 더 안심돼요."
+            },
+            {
+              "intent": "이 카드 여기서 돼요?",
+              "say": { "en": { "t": "Does this card work here?", "s": "더즈 디스 카드 웍 히어?" } },
+              "reply": {
+                "en": [
+                  { "t": "Let's try it.", "s": "렛츠 트라이잇", "ko": "한번 해보죠." }
+                ]
+              },
+              "note": "카드를 넣기 전에 직원에게 카드를 보여주면서 물어보면 헛수고를 덜어요.",
+              "volatile": true
+            },
+            {
+              "intent": "화면 영어로 바꿔 주세요.",
+              "say": { "en": { "t": "Can you change it to English?", "s": "캔유 체인지 잇 투 잉글리시?" } },
+              "reply": {
+                "en": [
+                  { "t": "Press this button.", "s": "프레스 디스 버튼", "ko": "이 버튼 누르세요." }
+                ]
+              }
+            },
+            {
+              "intent": "다시 한번 세어 주실래요?",
+              "say": { "en": { "t": "Can you count it again?", "s": "캔유 카운팃 어겐?" } },
+              "reply": {
+                "en": [
+                  { "t": "Sure, let me check.", "s": "슈어, 렛미 첵", "ko": "네, 확인해 볼게요." }
+                ]
+              },
+              "note": "받은 돈은 창구 앞에서 그 자리에 서서 세어 보세요. 자리를 뜨고 나면 확인해 주기 어려워요."
+            }
+          ]
+        },
+        {
+          "emoji": "💵",
+          "label": "잔돈 주세요",
+          "keywords": ["잔돈", "동전", "지폐", "바꿔주세요", "작은 돈", "change", "coins", "bills"],
+          "cards": [
+            {
+              "intent": "작은 돈으로 주세요.",
+              "say": { "en": { "t": "Small bills, please.", "s": "스몰 빌즈, 플리즈" } },
+              "reply": {
+                "en": [
+                  { "t": "Tens and fives okay?", "s": "텐즈앤 파이브즈 오케이?", "ko": "10달러, 5달러짜리로 괜찮아요?" }
+                ]
+              },
+              "note": "팁이나 택시에는 작은 지폐가 훨씬 편해요. 큰돈만 들고 다니면 정작 낼 때 곤란해집니다."
+            },
+            {
+              "intent": "1달러짜리도 좀 주세요.",
+              "say": { "en": { "t": "One dollar bills, please.", "s": "원 달러 빌즈, 플리즈" } },
+              "reply": {
+                "en": [
+                  { "t": "How many?", "s": "하우 매니?", "ko": "몇 장이나요?" }
+                ]
+              },
+              "note": "호텔이나 식당에서 팁을 낼 때 1달러짜리가 제일 많이 쓰여요. 열 장쯤 챙겨두면 마음이 편합니다."
+            },
+            {
+              "intent": "25센트짜리 좀 주세요.",
+              "say": { "en": { "t": "Some quarters, please.", "s": "썸 쿼러즈, 플리즈" } },
+              "reply": {
+                "en": [
+                  { "t": "A roll is ten dollars.", "s": "어 롤 이즈 텐 달러즈", "ko": "한 통에 10달러예요." },
+                  { "t": "How many rolls?", "s": "하우 매니 롤즈?", "ko": "몇 통 드릴까요?" }
+                ]
+              },
+              "note": "쿼터(25센트)는 빨래방·사물함·주차기계에서 제일 많이 써요. 한 통(roll)이 40개, 10달러예요. 은행 말고 마트 계산대나 편의점에서 바꿔주는 곳도 많으니 가까운 데서 물어보세요.",
+              "volatile": true
+            },
+            {
+              "intent": "이 동전 지폐로 바꿔 주세요.",
+              "say": { "en": { "t": "Can you change these coins?", "s": "캔유 체인지 디즈 코인즈?" } },
+              "reply": {
+                "en": [
+                  { "t": "Do you have an account with us?", "s": "두유 해번 어카운트 위더스?", "ko": "저희 계좌 있으세요?" },
+                  { "t": "They need to be rolled.", "s": "데이 니투비 롤드", "ko": "통에 넣어 오셔야 해요." }
+                ]
+              },
+              "note": "계좌가 없으면 아예 안 해주는 은행이 많고, 포장 안 된 낱개 동전은 더 그래요. 동전 몇 개 정도는 마트 계산대에서 그냥 쓸 수 있지만, 한꺼번에 많이 내밀면 거절당할 수 있어요.",
+              "volatile": true
+            }
+          ]
+        },
+        {
+          "emoji": "⚠️",
+          "label": "안 될 때",
+          "keywords": ["안 돼요", "고장", "카드", "먹혔어요", "문제", "도와주세요", "not working", "stuck", "help"],
+          "cards": [
+            {
+              "intent": "카드가 안 돼요.",
+              "say": { "en": { "t": "My card doesn't work.", "s": "마이 카드 더즌 웍" } },
+              "reply": {
+                "en": [
+                  { "t": "Try another card.", "s": "트라이 어나더 카드", "ko": "다른 카드로 해보세요." }
+                ]
+              }
+            },
+            {
+              "intent": "카드가 안에서 안 나와요.",
+              "say": { "en": { "t": "The machine took my card.", "s": "더 머신 툭 마이 카드" } },
+              "reply": {
+                "en": [
+                  { "t": "I'll get someone.", "s": "아일 겟 썸원", "ko": "사람 불러올게요." }
+                ]
+              },
+              "note": "카드가 기계 안에 들어갔으면 자리를 뜨지 말고 직원을 부르세요."
+            },
+            {
+              "intent": "돈이 안 나왔어요.",
+              "say": { "en": { "t": "The money didn't come out.", "s": "더 머니 디든 컴아웃" } },
+              "reply": {
+                "en": [
+                  { "t": "Please wait a moment.", "s": "플리즈 웨이러 모먼트", "ko": "잠시만 기다려 주세요." }
+                ]
+              },
+              "note": "화면과 기계 번호를 사진으로 찍어두세요. 나중에 은행에 말할 때 그 사진 한 장이 제일 강합니다."
+            },
+            {
+              "intent": "도와주실 분 있어요?",
+              "say": { "en": { "t": "Can someone help me?", "s": "캔 썸원 헬프 미?" } },
+              "reply": {
+                "en": [
+                  { "t": "One moment, please.", "s": "원 모먼트, 플리즈", "ko": "잠시만 기다려 주세요." }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
